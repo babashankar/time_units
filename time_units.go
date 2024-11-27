@@ -10,8 +10,6 @@ import (
 	"time"
 )
 
-//compatible with 1.18
-
 // TimeUnitDuration represents a duration with days, hours, minutes, and seconds.
 type TimeUnitDuration struct {
 	days    int
@@ -139,13 +137,4 @@ func (t *TimeUnitDuration) UnmarshalJSON(data []byte) error {
 
 	*t = parsed
 	return nil
-}
-
-// ConvertStringToTimeUnitDuration is a utility function to directly convert a string to TimeUnitDuration.
-func ConvertStringToTimeUnitDuration(input string) (TimeUnitDuration, error) {
-	return ParseTimeUnitDuration(input)
-}
-
-type Test struct {
-	Dur TimeUnitDuration
 }
