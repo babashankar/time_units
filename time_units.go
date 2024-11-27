@@ -10,6 +10,8 @@ import (
 	"time"
 )
 
+//compatible with 1.18
+
 // TimeUnitDuration represents a duration with days, hours, minutes, and seconds.
 type TimeUnitDuration struct {
 	days    int
@@ -147,4 +149,3 @@ func ConvertStringToTimeUnitDuration(input string) (TimeUnitDuration, error) {
 type Test struct {
 	Dur TimeUnitDuration
 }
-
